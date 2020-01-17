@@ -3,3 +3,17 @@
     flex-direction: row;
     justify-content: flex-end;
 }
+
+.header {
+    padding: 50px;
+    background-color: black;
+    color: white;
+    text-align: left;
+    border-radius: 15px;
+    font-family: "Montserrat";
+
+}
+
+h2{
+    font-size: 3rem;
+}
