@@ -1,0 +1,25 @@
+.navbar-color {
+    background-color: #563d7c;
+}
+
+.navbar-text-color {
+    color: white !important;
+}
+
+.form-control {
+    width: 75% !important;
+}
+
+.form-inline {
+    width: 100%;
+}
+
+.table-color-grey {
+    background-color: #e9ecef;
+}
+
+.plus-button {
+    margin-left: 1rem;
+    background-color: pink;
+    border-radius: 50px;
+}
