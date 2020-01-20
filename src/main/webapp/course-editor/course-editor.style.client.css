@@ -1,0 +1,24 @@
+.navbar-color {
+    background-color: #563d7c;
+}
+
+.navbar-text-color {
+    color: white !important;
+}
+
+.left-bar {
+    background-color: #b39ddb;
+    min-height: calc(100vh - 65px);
+}
+.right-side {
+    background-color: black;
+    min-height: calc(100vh - 65px);
+}
+
+.round-btn {
+    border-radius: 10px !important;
+}
+
+.font-fam{
+    font-family: "Montserrat";
+}
