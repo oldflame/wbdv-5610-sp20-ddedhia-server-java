@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width"/>
     <title>Course Editor</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           rel="stylesheet"
@@ -26,8 +26,8 @@
                 <a class="navbar-brand navbar-text-color ml-4" href="#">
                     Build
                 </a>
-                <a class="navbar-brand navbar-text-color" href="#">
-                    Pages
+                <a class="navbar-brand navbar-text-color active" href="#">
+                    <span class="mx-1">Pages</span>
                 </a>
                 <a class="navbar-brand navbar-text-color" href="#">
                     Theme
@@ -40,6 +40,9 @@
                 </a>
                 <a class="navbar-brand navbar-text-color" href="#">
                     Settings
+                </a>
+                <a class="navbar-brand navbar-text-color" href="#">
+                    <i class="fa fa-plus"></i>
                 </a>
             </div>
 
@@ -115,14 +118,44 @@
                 </div>
             </div>
         </a>
-            <a href="#" class="list-group-item list-group-item-action my-2 round-btn bg-transparent">
+            <a href="#"
+               class="list-group-item list-group-item-action my-2 round-btn bg-transparent">
                 <i class="fa fa-3x fa-plus-circle plus-right"></i>
             </a>
         </div>
     </div>
     <div class="col-md-9 col-12 right-side">
-
-
+        <div class="container-display my-3">
+            <button type="button" class="btn btn-outline-dark mx-3">
+                Topic 1
+            </button>
+            <button type="button" class="btn btn-outline-dark mx-3">
+                Topic 2
+            </button>
+            <button type="button" class="btn btn-outline-dark mx-3">
+                Topic 3
+            </button>
+            <button type="button" class="btn btn-outline-dark mx-3">
+                Topic 4
+            </button>
+            <button type="button" class="btn btn-outline-dark mx-3">
+                Topic 5
+            </button>
+            <button type="button" class="btn btn-outline-dark mx-3">
+                <i class="fa fa-plus"></i>
+            </button>
+        </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="custom-control custom-switch mid-layer">
+                <label class="custom-control-label" for="customSwitch1">Preview</label>
+                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+            </div>
+            <button type="button" class="btn btn-outline-dark mx-3 mid-layer">
+                Save
+            </button>
+        </div>
+    </div>
     </div>
 </div>
 </body>

@@ -27,3 +27,19 @@
 .font-fam{
     font-family: "Montserrat";
 }
+
+.container-display {
+    display: flex;
+}
+
+.active {
+    background-color: white;
+    border-radius: 5px;
+    color: black !important;
+}
+
+.mid-layer {
+    float: right;
+    display: inline;
+    margin-right: 4rem;
+}
