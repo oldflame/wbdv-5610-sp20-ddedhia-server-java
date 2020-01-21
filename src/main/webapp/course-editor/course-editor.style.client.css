@@ -43,3 +43,15 @@
     display: inline;
     margin-right: 4rem;
 }
+
+.small-select{
+    width: 65% !important;
+}
+
+.yellow-btn {
+    background-color: yellow;
+}
+
+.right-pull {
+    float: right;
+}
