@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    <link href="profile.style.client.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<body class="p-3">
+<div class="row">
+    <div class="offset-lg-4 col-md-4 mt-lg-4">
+        <div class="card">
+            <div class="card-body">
+                <div class="header">
+                    <h2>
+                        WhiteBoard!
+                    </h2>
+                </div>
+                <h1> Profile </h1>
+                <form>
+                    <div class="form-row">
+                        <div class="alert alert-success col-md-12" role="alert">
+                            Successfully updated Profile
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username"
+                                   placeholder="alice" disabled>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="inputEmail">Email</label>
+                            <input type="email" class="form-control" id="inputEmail"
+                                   placeholder="johndoe@gmail.com">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="phone-number">Phone Number</label>
+                            <input type="number" class="form-control" id="phone-number">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="role">Role</label>
+                            <select class="custom-select" id="role">
+                                <option>
+                                    Faculty
+                                </option>
+                                <option>
+                                    Student
+                                </option>
+                                <option>
+                                    Admin
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" class="form-control" id="dob">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="../course-list/course-list.template.client.html">
+                            <button type="button" class="btn btn-outline-dark btn-block my-1">
+                                Update
+                            </button>
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-outline-dark btn-block my-1">
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

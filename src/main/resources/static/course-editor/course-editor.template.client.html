@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"/>
+    <title>Course Editor</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="course-editor.style.client.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
+          rel="stylesheet">
+</head>
+<body class="font-fam">
+<div>
+    <nav class="navbar navbar-light navbar-color">
+        <form class="form-inline">
+            <div>
+                <a class="navbar-brand navbar-text-color" href="#">
+                    <i class="fa fa-bars mr-3"></i>
+                    CS 5610 Web Development Graduate
+                </a>
+                <a class="navbar-brand navbar-text-color ml-4" href="#">
+                    Build
+                </a>
+                <a class="navbar-brand navbar-text-color active" href="#">
+                    <span class="mx-1">Pages</span>
+                </a>
+                <a class="navbar-brand navbar-text-color" href="#">
+                    Theme
+                </a>
+                <a class="navbar-brand navbar-text-color" href="#">
+                    Store
+                </a>
+                <a class="navbar-brand navbar-text-color" href="#">
+                    Apps
+                </a>
+                <a class="navbar-brand navbar-text-color" href="#">
+                    Settings
+                </a>
+                <a class="navbar-brand navbar-text-color" href="#">
+                    <i class="fa fa-plus"></i>
+                </a>
+            </div>
+
+        </form>
+    </nav>
+</div>
+<div class="row">
+    <div class="col-3 left-bar pl-4 d-none d-sm-inline">
+        <div class="list-group p-2">
+
+            <a href="#" class="list-group-item list-group-item-action my-2 round-btn">
+                <div class="row">
+                    <div class="col-10">
+                        Module 1 - jQuery
+                    </div>
+                    <div class="col-2">
+                        <i class="fa fa-2x fa-times"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action my-2 round-btn">
+                <div class="row">
+                    <div class="col-10">
+                        Module 2 - React
+                    </div>
+                    <div class="col-2">
+                        <i class="fa fa-2x fa-times"></i>
+                    </div>
+                </div>
+            </a><a href="#" class="list-group-item list-group-item-action my-2 round-btn">
+            <div class="row">
+                <div class="col-10">
+                    Module 3 - Redux
+                </div>
+                <div class="col-2">
+                    <i class="fa fa-2x fa-times"></i>
+                </div>
+            </div>
+        </a><a href="#" class="list-group-item list-group-item-action my-2 round-btn">
+            <div class="row">
+                <div class="col-10">
+                    Module 4 - Native
+                </div>
+                <div class="col-2">
+                    <i class="fa fa-2x fa-times"></i>
+                </div>
+            </div>
+        </a><a href="#" class="list-group-item list-group-item-action my-2 round-btn">
+            <div class="row">
+                <div class="col-10">
+                    Module 5 - Angular
+                </div>
+                <div class="col-2">
+                    <i class="fa fa-2x fa-times"></i>
+                </div>
+            </div>
+        </a><a href="#" class="list-group-item list-group-item-action my-2 round-btn">
+            <div class="row">
+                <div class="col-10">
+                    Module 6 - Node
+                </div>
+                <div class="col-2">
+                    <i class="fa fa-2x fa-times"></i>
+                </div>
+            </div>
+        </a><a href="#" class="list-group-item list-group-item-action my-2 round-btn">
+            <div class="row">
+                <div class="col-10">
+                    Module 7 - Mongo
+                </div>
+                <div class="col-2">
+                    <i class="fa fa-2x fa-times"></i>
+                </div>
+            </div>
+        </a>
+            <a href="#"
+               class="list-group-item list-group-item-action my-2 round-btn bg-transparent">
+                <i class="fa fa-3x fa-plus-circle plus-right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-9 col-12 right-side">
+        <div class="container-display my-3">
+            <button type="button" class="btn btn-outline-dark mx-3">
+                Topic 1
+            </button>
+            <button type="button" class="btn btn-outline-dark mx-3">
+                Topic 2
+            </button>
+            <button type="button" class="btn btn-outline-dark mx-3">
+                Topic 3
+            </button>
+            <button type="button" class="btn btn-outline-dark mx-3">
+                Topic 4
+            </button>
+            <button type="button" class="btn btn-outline-dark mx-3">
+                Topic 5
+            </button>
+            <button type="button" class="btn btn-outline-dark mx-3">
+                <i class="fa fa-plus"></i>
+            </button>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="custom-control custom-switch mid-layer">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                    <label class="custom-control-label" for="customSwitch1">Preview</label>
+                </div>
+                <button type="button" class="btn btn-success mx-3 mid-layer">
+                    Save
+                </button>
+            </div>
+        </div>
+        <div class="card mt-3 mr-3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-8">
+                        <h1>Heading Widget</h1>
+                    </div>
+                    <div class="col-4 right-pull">
+                        <button type="button" class="btn btn-outline-dark yellow-btn">
+                            <i class="fa fa-arrow-up"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-dark yellow-btn">
+                            <i class="fa fa-arrow-down"></i>
+                        </button>
+                        <select class="custom-select small-select" id="inputGroupSelect01">
+                            <option selected>Heading</option>
+                            <option value="slides">Sides</option>
+                            <option value="movies">Movies</option>
+                            <option value="html">HTML</option>
+                        </select>
+                        <button type="button" class="btn btn-danger">
+                            <i class="fa fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="col-12">
+                        <input type="textarea" class="form-control"
+                               placeholder="Heading Text">
+                        <select class="custom-select mt-3">
+                            <option selected>Heading 1</option>
+                            <option value="heading2">Heading 2</option>
+                            <option value="heading3">Heading 3</option>
+                            <option value="heading4">Heading 4</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <input type="textarea" class="form-control mt-3"
+                               placeholder="Widget Name">
+                    </div>
+                    <div class="col-12 mt-3">
+
+                        <h3><b>
+                            Preview
+                        </b>
+                        </h3>
+                        <h1><b>
+                            Heading Text
+                        </b>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mt-3">
+                <button type="button" class="btn btn-danger mx-3 right-pull">
+                    <i class="fa fa-plus"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
