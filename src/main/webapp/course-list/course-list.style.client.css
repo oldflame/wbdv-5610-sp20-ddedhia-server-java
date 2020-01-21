@@ -17,3 +17,8 @@
 .table-color-grey {
     background-color: #e9ecef;
 }
+
+a,a:hover {
+    color:black;
+    text-decoration: none;
+}
