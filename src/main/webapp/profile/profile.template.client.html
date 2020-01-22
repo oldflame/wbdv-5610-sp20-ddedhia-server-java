@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Profile</title>
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width"/>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           rel="stylesheet"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
@@ -26,26 +26,29 @@
                 <h1> Profile </h1>
                 <form>
                     <div class="form-row">
-                        <div class="alert alert-success col-md-12" role="alert">
+                        <div class="alert alert-success col-md-12 wbdv-message" role="alert">
                             Successfully updated Profile
                         </div>
                         <div class="form-group col-md-12">
                             <label for="username">Username</label>
-                            <input type="text" class="form-control" id="username"
+                            <input type="text" class="form-control wbdv-field wbdv-username"
+                                   id="username"
                                    placeholder="alice" disabled>
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputEmail">Email</label>
-                            <input type="email" class="form-control" id="inputEmail"
+                            <input type="email" class="form-control wbdv-field wbdv-email"
+                                   id="inputEmail"
                                    placeholder="johndoe@gmail.com">
                         </div>
                         <div class="form-group col-md-12">
                             <label for="phone-number">Phone Number</label>
-                            <input type="number" class="form-control" id="phone-number">
+                            <input type="number" class="form-control wbdv-field wbdv-phone"
+                                   id="phone-number">
                         </div>
                         <div class="form-group col-md-12">
                             <label for="role">Role</label>
-                            <select class="custom-select" id="role">
+                            <select class="custom-select wbdv-field wbdv-role" id="role">
                                 <option>
                                     Faculty
                                 </option>
@@ -59,19 +62,21 @@
                         </div>
                         <div class="form-group col-md-12">
                             <label for="dob">Date of Birth</label>
-                            <input type="date" class="form-control" id="dob">
+                            <input type="date" class="form-control wbdv-field wbdv-dob" id="dob">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
                             <a href="../course-list/course-list.template.client.html">
-                            <button type="button" class="btn btn-outline-dark btn-block my-1">
-                                Update
-                            </button>
+                                <button type="button"
+                                        class="btn btn-outline-dark btn-block my-1 wbdv-button wbdv-update">
+                                    Update
+                                </button>
                             </a>
                         </div>
                         <div class="col-md-6">
-                            <button type="button" class="btn btn-outline-dark btn-block my-1">
+                            <button type="button"
+                                    class="btn btn-outline-dark btn-block my-1 wbdv-button wbdv-logout">
                                 Cancel
                             </button>
                         </div>

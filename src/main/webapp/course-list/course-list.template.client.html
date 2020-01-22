@@ -20,116 +20,166 @@
     <form class="form-inline">
         <div>
             <a class="navbar-brand navbar-text-color" href="#">
-                <i class="fa fa-bars"></i>
-                <span class="d-none d-md-inline">Course Manager</span>
+                <i class="fa fa-bars wbdv-field wbdv-hamburger"></i>
+                <span class="d-none d-md-inline wbdv-label wbdv-course-manager">Course Manager</span>
             </a>
         </div>
-        <input class="form-control" type="search" placeholder="New Course Title">
-        <i class="fa fa-3x fa-plus-circle pl-3 text-white"></i>
+        <input class="form-control wbdv-field wbdv-new-course" type="search"
+               placeholder="New Course Title">
+        <i class="fa fa-3x fa-plus-circle pl-3 text-white wbdv-button wbdv-add-course"></i>
     </form>
 </nav>
 <div class="container">
     <table class="table table-hover">
         <thead class="thead-light">
         <tr>
-            <th>Title</th>
-            <th class="d-none d-sm-table-cell">Owned By</th>
-            <th class="d-none d-sm-table-cell">Last Modified Time</th>
-            <th><i class="fa fa-filter"></i></th>
+            <th class="wbdv-header wbdv-title">Title</th>
+            <th class="d-none d-sm-table-cell wbdv-header wbdv-owner">Owned By</th>
+            <th class="d-none d-sm-table-cell wbdv-header wbdv-last-modified">Last Modified Time
+            </th>
+            <th><i class="fa fa-sort-down wbdv-header wbdv-sort"></i></th>
+            <th><i class="fa fa-th-list wbdv-button wbdv-list-layout"></i></th>
+            <th><i class="fa fa-th wbdv-button wbdv-grid-layout"></i></th>
         </tr>
         </thead>
         <tbody>
-        <tr>
+        <tr class="wbdv-row wbdv-course">
 
-            <td><a href="../course-editor/course-editor.template.client.html">CS 5500 Software
+            <td><a href="../course-editor/course-editor.template.client.html" class="wbdv-row wbdv-title"><i
+                    class="fa fa-bars mr-2 wbdv-row wbdv-icon"></i>CS 5500 Software
                 Engineering Graduate </a></td>
-            <td class="d-none d-sm-table-cell">me</td>
-            <td class="d-none d-sm-table-cell">6.45 PM</td>
-            <td><i class="fa fa-times"></i></td>
+            <td class="d-none d-sm-table-cell wbdv-row wbdv-owner">me</td>
+            <td class="d-none d-sm-table-cell wbdv-row wbdv-modified-date">6.45 PM</td>
+            <td></td>
+            <td></td>
+            <td><i class="fa fa-times wbdv-row wbdv-button wbdv-delete"></i></td>
         </tr>
         <tr>
-            <td><a href="../course-editor/course-editor.template.client.html">CS 4550 Software Engineering Undergraduate</a></td>
-            <td class="d-none d-sm-table-cell">me</td>
-            <td class="d-none d-sm-table-cell">5:30 PM</td>
-            <td><i class="fa fa-times"></i></td>
+            <td><a href="../course-editor/course-editor.template.client.html" class="wbdv-row wbdv-title"><i
+                    class="fa fa-bars mr-2 wbdv-row wbdv-icon"></i>CS 4550 Software Engineering
+                Undergraduate</a></td>
+            <td class="d-none d-sm-table-cell wbdv-row wbdv-owner">me</td>
+            <td class="d-none d-sm-table-cell wbdv-row wbdv-modified-date">5:30 PM</td>
+            <td></td>
+            <td></td>
+            <td><i class="fa fa-times wbdv-row wbdv-button wbdv-delete"></i></td>
         </tr>
         <tr>
-            <td><a href="../course-editor/course-editor.template.client.html">CS 4500 Web Dev Undergraduate</a></td>
-            <td class="d-none d-sm-table-cell">me</td>
-            <td class="d-none d-sm-table-cell">8:15 AM</td>
-            <td><i class="fa fa-times"></i></td>
+            <td><a href="../course-editor/course-editor.template.client.html" class="wbdv-row wbdv-title"><i
+                    class="fa fa-bars mr-2 wbdv-row wbdv-icon"></i>CS 4500 Web Dev Undergraduate</a>
+            </td>
+            <td class="d-none d-sm-table-cell wbdv-row wbdv-owner">me</td>
+            <td class="d-none d-sm-table-cell wbdv-row wbdv-modified-date">8:15 AM</td>
+            <td></td>
+            <td></td>
+            <td><i class="fa fa-times wbdv-row wbdv-button wbdv-delete"></i></td>
         </tr>
         <tr>
-            <td><a href="../course-editor/course-editor.template.client.html">CS 5610 Web Dev Graduate</a></td>
-            <td class="d-none d-sm-table-cell">me</td>
-            <td class="d-none d-sm-table-cell">10:45 AM</td>
-            <td><i class="fa fa-times"></i></td>
+            <td><a href="../course-editor/course-editor.template.client.html" class="wbdv-row wbdv-title"><i
+                    class="fa fa-bars mr-2 wbdv-row wbdv-icon"></i>CS 5610 Web Dev Graduate</a></td>
+            <td class="d-none d-sm-table-cell wbdv-row wbdv-owner">me</td>
+            <td class="d-none d-sm-table-cell wbdv-row wbdv-modified-date">10:45 AM</td>
+            <td></td>
+            <td></td>
+            <td><i class="fa fa-times wbdv-row wbdv-button wbdv-delete"></i></td>
         </tr>
         <tr>
-            <td><a href="../course-editor/course-editor.template.client.html">CS 5200 Intro to Databases</a></td>
-            <td class="d-none d-sm-table-cell">me</td>
-            <td class="d-none d-sm-table-cell">5:30 AM</td>
-            <td><i class="fa fa-times"></i></td>
+            <td><a href="../course-editor/course-editor.template.client.html" class="wbdv-row wbdv-title"><i
+                    class="fa fa-bars mr-2 wbdv-row wbdv-icon"></i>CS 5200 Intro to Databases</a>
+            </td>
+            <td class="d-none d-sm-table-cell wbdv-row wbdv-owner">me</td>
+            <td class="d-none d-sm-table-cell wbdv-row wbdv-modified-date">5:30 AM</td>
+            <td></td>
+            <td></td>
+            <td><i class="fa fa-times wbdv-row wbdv-button wbdv-delete"></i></td>
         </tr>
         <tr class="table-color-grey">
             <td> Yesterday</td>
             <td class="d-none d-sm-table-cell"></td>
             <td class="d-none d-sm-table-cell"></td>
             <td></td>
+            <td></td>
+            <td></td>
         </tr>
         <tr>
-            <td><a href="../course-editor/course-editor.template.client.html">WEBDEV Syllabus</a></td>
-            <td class="d-none d-sm-table-cell">me</td>
-            <td class="d-none d-sm-table-cell">June 14, 2018</td>
-            <td><i class="fa fa-times"></i></td>
+            <td><a href="../course-editor/course-editor.template.client.html" class="wbdv-row wbdv-title"><i
+                    class="fa fa-bars mr-2 wbdv-row wbdv-icon"></i>WEBDEV Syllabus</a></td>
+            <td class="d-none d-sm-table-cell wbdv-row wbdv-owner wbdv-row wbdv-owner">me</td>
+            <td class="d-none d-sm-table-cell wbdv-row wbdv-modified-date">June 14, 2018</td>
+            <td></td>
+            <td></td>
+            <td><i class="fa fa-times wbdv-row wbdv-button wbdv-delete"></i></td>
         </tr>
         <tr>
-            <td><a href="../course-editor/course-editor.template.client.html">WEBDEV Syllabus</a></td>
-            <td class="d-none d-sm-table-cell">me</td>
-            <td class="d-none d-sm-table-cell">June 14, 2018</td>
-            <td><i class="fa fa-times"></i></td>
+            <td><a href="../course-editor/course-editor.template.client.html" class="wbdv-row wbdv-title"><i
+                    class="fa fa-bars mr-2 wbdv-row wbdv-icon"></i>WEBDEV Syllabus</a></td>
+            <td class="d-none d-sm-table-cell wbdv-row wbdv-owner">me</td>
+            <td class="d-none d-sm-table-cell wbdv-row wbdv-modified-date">June 14, 2018</td>
+            <td></td>
+            <td></td>
+            <td><i class="fa fa-times wbdv-row wbdv-button wbdv-delete"></i></td>
         </tr>
         <tr>
-            <td><a href="../course-editor/course-editor.template.client.html">WEBDEV 2.0 - REACT</a></td>
-            <td class="d-none d-sm-table-cell">me</td>
-            <td class="d-none d-sm-table-cell">May 4, 2019</td>
-            <td><i class="fa fa-times"></i></td>
+            <td><a href="../course-editor/course-editor.template.client.html" class="wbdv-row wbdv-title"><i
+                    class="fa fa-bars mr-2 wbdv-row wbdv-icon"></i>WEBDEV 2.0 - REACT</a></td>
+            <td class="d-none d-sm-table-cell wbdv-row wbdv-owner">me</td>
+            <td class="d-none d-sm-table-cell wbdv-row wbdv-modified-date">May 4, 2019</td>
+            <td></td>
+            <td></td>
+            <td><i class="fa fa-times wbdv-row wbdv-button wbdv-delete"></i></td>
         </tr>
         <tr class="table-color-grey">
             <td> Previous 7 days</td>
             <td class="d-none d-sm-table-cell"></td>
             <td class="d-none d-sm-table-cell"></td>
             <td></td>
+            <td></td>
+            <td></td>
         </tr>
         <tr>
-            <td><a href="../course-editor/course-editor.template.client.html">WEBDEV Syllabus</a></td>
-            <td class="d-none d-sm-table-cell">me</td>
-            <td class="d-none d-sm-table-cell">June 14, 2018</td>
-            <td><i class="fa fa-times"></i></td>
+            <td><a href="../course-editor/course-editor.template.client.html" class="wbdv-row wbdv-title"><i
+                    class="fa fa-bars mr-2 wbdv-row wbdv-icon"></i>WEBDEV Syllabus</a></td>
+            <td class="d-none d-sm-table-cell wbdv-row wbdv-owner">me</td>
+            <td class="d-none d-sm-table-cell wbdv-row wbdv-modified-date">June 14, 2018</td>
+            <td></td>
+            <td></td>
+            <td><i class="fa fa-times wbdv-row wbdv-button wbdv-delete"></i></td>
         </tr>
         <tr>
-            <td><a href="../course-editor/course-editor.template.client.html">WEBDEV 2.0 - REACT</a></td>
-            <td class="d-none d-sm-table-cell">me</td>
-            <td class="d-none d-sm-table-cell">October 24, 2018</td>
-            <td><i class="fa fa-times"></i></td>
+            <td><a href="../course-editor/course-editor.template.client.html" class="wbdv-row wbdv-title"><i
+                    class="fa fa-bars mr-2 wbdv-row wbdv-icon"></i>WEBDEV 2.0 - REACT</a></td>
+            <td class="d-none d-sm-table-cell wbdv-row wbdv-owner">me</td>
+            <td class="d-none d-sm-table-cell wbdv-row wbdv-modified-date">October 24, 2018</td>
+            <td></td>
+            <td></td>
+            <td><i class="fa fa-times wbdv-row wbdv-button wbdv-delete"></i></td>
         </tr>
         <tr>
-            <td><a href="../course-editor/course-editor.template.client.html">WEBDEV Syllabus</a></td>
-            <td class="d-none d-sm-table-cell">me</td>
-            <td class="d-none d-sm-table-cell">June 14, 2018</td>
-            <td><i class="fa fa-times"></i></td>
+            <td><a href="../course-editor/course-editor.template.client.html" class="wbdv-row wbdv-title"><i
+                    class="fa fa-bars mr-2 wbdv-row wbdv-icon"></i>WEBDEV Syllabus</a></td>
+            <td class="d-none d-sm-table-cell wbdv-row wbdv-owner">me</td>
+            <td class="d-none d-sm-table-cell wbdv-row wbdv-modified-date">June 14, 2018</td>
+            <td></td>
+            <td></td>
+            <td><i class="fa fa-times wbdv-row wbdv-button wbdv-delete"></i></td>
         </tr>
         <tr>
-            <td><a href="../course-editor/course-editor.template.client.html">WEBDEV Syllabus</a></td>
-            <td class="d-none d-sm-table-cell">me</td>
-            <td class="d-none d-sm-table-cell">July 23, 2018</td>
-            <td><i class="fa fa-times"></i></td>
+            <td><a href="../course-editor/course-editor.template.client.html" class="wbdv-row wbdv-title"><i
+                    class="fa fa-bars mr-2 wbdv-row wbdv-icon"></i>WEBDEV Syllabus</a></td>
+            <td class="d-none d-sm-table-cell wbdv-row wbdv-owner">me</td>
+            <td class="d-none d-sm-table-cell wbdv-row wbdv-modified-date">July 23, 2018</td>
+            <td></td>
+            <td></td>
+            <td><i class="fa fa-times wbdv-row wbdv-button wbdv-delete"></i></td>
         </tr>
         <tr>
-            <td><a href="../course-editor/course-editor.template.client.html">WEBDEV Syllabus</a></td>
-            <td class="d-none d-sm-table-cell">me</td>
-            <td class="d-none d-sm-table-cell">September 30, 2018</td>
-            <td><i class="fa fa-times"></i></td>
+            <td><a href="../course-editor/course-editor.template.client.html" class="wbdv-row wbdv-title"><i
+                    class="fa fa-bars mr-2 wbdv-row wbdv-icon"></i>WEBDEV Syllabus</a></td>
+            <td class="d-none d-sm-table-cell wbdv-row wbdv-owner">me</td>
+            <td class="d-none d-sm-table-cell wbdv-row wbdv-modified-date">September 30, 2018</td>
+            <td></td>
+            <td></td>
+            <td><i class="fa fa-times wbdv-row wbdv-button wbdv-delete"></i></td>
         </tr>
         </tbody>
     </table>

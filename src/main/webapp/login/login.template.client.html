@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width"/>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           rel="stylesheet"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
@@ -28,19 +28,21 @@
                         <div class="form-row">
                             <div class="form-group col-md-12">
                                 <label for="inputEmail">Email</label>
-                                <input type="email" class="form-control" id="inputEmail"
+                                <input type="email" class="form-control wbdv-field wbdv-username"
+                                       id="inputEmail"
                                        placeholder="johndoe@gmail.com">
                             </div>
                             <div class="form-group col-md-12">
                                 <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password">
+                                <input type="password" class="form-control wbdv-field wbdv-password"
+                                       id="password">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <a href="../course-list/course-list.template.client.html">
                                     <button type="button"
-                                            class="btn btn-outline-dark btn-block my-1">
+                                            class="btn btn-outline-dark btn-block my-1 wbdv-button wbdv-login">
                                         Login
                                     </button>
                                 </a>
@@ -48,7 +50,8 @@
                             <div class="col-md-6">
                                 <a href="../register/register.template.client.html">
                                     <button type="button"
-                                            class="btn btn-outline-dark btn-block my-1"> Register
+                                            class="btn btn-outline-dark btn-block my-1 wbdv-link wbdv-register">
+                                        Register
                                     </button>
                                 </a>
                             </div>
@@ -56,6 +59,7 @@
 
                     </div>
                 </div>
+                <a href=# class="wbdv-link wbdv-forgot-password">Forgot Password</a>
             </div>
         </div>
     </form>

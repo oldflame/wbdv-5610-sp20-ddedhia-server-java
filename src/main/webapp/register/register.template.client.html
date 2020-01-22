@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width"/>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           rel="stylesheet"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
@@ -32,12 +32,14 @@
                         </div>
                         <div class="form-group col-md-12">
                             <label for="username">Username</label>
-                            <input type="text" class="form-control" id="username"
+                            <input type="text" class="form-control wbdv-field wbdv-username"
+                                   id="username"
                                    placeholder="username">
                         </div>
                         <div class="form-group col-md-12">
                             <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password">
+                            <input type="password" class="form-control wbdv-field wbdv-password"
+                                   id="password">
                             <small id="passwordHelpBlock" class="form-text text-muted">
                                 Your password must be 8-20 characters long, contain letters and
                                 numbers, and
@@ -46,21 +48,25 @@
                         </div>
                         <div class="form-group col-md-12">
                             <label for="confirm-password">Confirm Password</label>
-                            <input type="password" class="form-control" id="confirm-password">
+                            <input type="password"
+                                   class="form-control wbdv-field wbdv-password-verify"
+                                   id="confirm-password">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <a href = "../profile/profile.template.client.html">
-                            <button type="button" class="btn btn-outline-dark btn-block my-1">
-                                Register
-                            </button>
+                            <a href="../profile/profile.template.client.html">
+                                <button type="button"
+                                        class="btn btn-outline-dark btn-block my-1 wbdv-button wbdv-register">
+                                    Sign Up
+                                </button>
                             </a>
                         </div>
                         <div class="col-md-6">
                             <a href="../welcome/welcome.template.client.html">
-                                <button type="button" class="btn btn-outline-dark btn-block my-1">
-                                    Cancel
+                                <button type="button"
+                                        class="btn btn-outline-dark btn-block my-1 wbdv-link wbdv-login">
+                                    Login
                                 </button>
                             </a>
                         </div>
