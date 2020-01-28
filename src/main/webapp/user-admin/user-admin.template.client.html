@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+          name='viewport'/>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="user-admin.style.client.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
+          rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../models/user.model.client.js"></script>
+    <script src="../services/user.service.client.js"></script>
+    <script src="user-admin.controller.client.js"></script>
+    <title>User Admin</title>
+</head>
+<body>
+<nav class="navbar navbar-light navbar-color navbar-expand">
+    <div>
+        <a class="navbar-brand navbar-text-color" href="#">
+        </a>
+    </div>
+</nav>
+<div class="container">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Username</th>
+            <th>Password</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Role</th>
+            <th>&nbsp;</th>
+        </tr>
+        </thead>
+        <tbody id="userList">
+        <tr class="wbdv-form">
+            <td><input id="usernameFld" class="form-control"
+                       placeholder="Username"/></td>
+            <td><input id="passwordFld" class="form-control"
+                       placeholder="Password"/></td>
+            <td><input id="firstNameFld" class="form-control"
+                       placeholder="First Name"/></td>
+            <td><input id="lastNameFld" class="form-control"
+                       placeholder="Last Name"/></td>
+            <td><select id="roleFld" class="form-control">
+                <option value="FACULTY">Faculty</option>
+                <option value="STUDENT">Student</option>
+                <option value="ADMIN">Admin</option>
+            </select></td>
+            <td><span class="float-right" style="white-space: nowrap">
+                 <i class="fa-2x fa fa-search wbdv-search" id="searchBtn"></i> <i
+                    class="fa-2x fa fa-plus wbdv-create" id="AddUserBtn"></i> <i
+                    class="fa-2x fa fa-check wbdv-update" id="UpdateUserBtn"></i>
+            </span></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
