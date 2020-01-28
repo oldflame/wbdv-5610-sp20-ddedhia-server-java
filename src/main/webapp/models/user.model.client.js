@@ -50,6 +50,30 @@ function User(_id, username, password, firstName, lastName, role) {
         return this._id;
     }
 
+    function setPhoneNumber(phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    this.getPhoneNumber = function(){
+        return this.phoneNumber
+    }
+
+    function setEmail(email){
+        this.email = email
+    }
+
+    this.getEmail = function () {
+        return this.email
+    }
+
+    function setDateOfBirth(dateOfBirth){
+        this.dateOfBirth = dateOfBirth
+    }
+
+    this.getDateOfBirth = function(){
+        return this.dateOfBirth
+    }
+
     this.getUser = function () {
         return {
             username: this.username,
