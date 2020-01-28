@@ -1,16 +1,21 @@
 (function () {
     let usersList = []
+    let userNameFld
+    let passwordFld
+    let firstNameFld
+    let lastNameFld
+    let roleFld
+    let userService
 
     function buildUser() {
-        console.log("inside build user")
-        let userName = $('#usernameFld').val()
-        let password = $('#passwordFld').val()
-        let firstName = $('#firstNameFld').val()
-        let lastName = $('#lastNameFld').val()
-        let role = $('#roleFld').val()
-        let user = new User("", userName, password, firstName, lastName, role)
+        userName = userNameFld.val()
+        password = passwordFld.val()
+        firstName = firstNameFld.val()
+        lastName = lastNameFld.val()
+        role = roleFld.val()
+        user = new User("", userName, password, firstName, lastName, role)
 
-        createUser(user).then((user) => {
+        userService.createUser(user).then((user) => {
             console.log("inside build user res", user)
 
             usersList.unshift(
@@ -33,7 +38,7 @@
                     <td>${users[i].getRole()}</td>
                     <td>
                     <span>
-                    <i class="fa-2x fa fa-pencil"></i>
+                    <i id=${users[i].getUserId()}_edit class="fa-2x fa fa-pencil"></i>
                     <i id=${users[i].getUserId()}_delete class="fa-2x fa fa-trash"></i>
                     </span>
                     </td>
@@ -44,6 +49,8 @@
             $('#userList').append(newRow)
             $(`#${users[i].getUserId()}_delete`).click(
                 () => deleteUser(users[i]._id).then(() => deleteUserFromUI(users[i].getUserId())))
+
+            $(`#${users[i].getUserId()}_edit`).click(() => editUserData(users[i].getUserId()))
         }
     }
 
@@ -69,12 +76,45 @@
 
     }
 
+    function editUserData(userId) {
+        getUserDetailsFromId(userId)
+        // console.log("editing", userDetails)
+        // populateForm(userDetails)
+    }
+
+    function getUserDetailsFromId(userId) {
+        userService.findUserById(userId).then((user) => {
+            populateForm(new User(user._id, user.username, user.password, user.firstName, user.lastName,
+                            user.role))
+        })
+
+    }
+
+
+
+    function populateForm(user) {
+        userNameFld.val(user.getUserName())
+        passwordFld.val(user.getPassword())
+        firstNameFld.val(user.getFirstName())
+        lastNameFld.val(user.getLastName())
+        roleFld.val(user.getRole())
+    }
+
     function main() {
-        findAllUsers().then((users) => {
+
+        userNameFld = $('#usernameFld')
+        passwordFld = $('#passwordFld')
+        firstNameFld = $('#firstNameFld')
+        lastNameFld = $('#lastNameFld')
+        roleFld = $('#roleFld')
+        userService = new AdminUserServiceClient()
+        userService.findAllUsers().then((users) => {
             usersList = formatUsers(users)
             renderUsers(usersList)
         })
         $('#AddUserBtn').click(buildUser)
+        $('#UpdateUserBtn').click()
+
     }
 
     $(main)

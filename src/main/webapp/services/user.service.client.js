@@ -1,4 +1,4 @@
-(function AdminUserServiceClient() {
+function AdminUserServiceClient() {
     this.createUser = createUser;
     this.findAllUsers = findAllUsers;
     this.findUserById = findUserById;
@@ -24,9 +24,16 @@
     }
 
     function findUserById(userId) {
+        return(fetch( `${self.url}/${userId}`, {
+            method: 'GET',
+            headers : {
+                'content-type' : 'application/json'
+            }
+        }).then(response =>response.json()))
     }
 
     function updateUser(userId, user) {
+        
     }
 
     function deleteUser(userId) {
@@ -37,5 +44,4 @@
             }
         }).then(response =>response.json()))
     }
-})
-()
+}
