@@ -16,6 +16,8 @@
         role = roleFld.val()
         user = new User("", userName, password, firstName, lastName, role)
 
+        resetFields()
+
         userService.createUser(user).then((user) => {
             console.log("inside build user res", user)
 
@@ -49,7 +51,8 @@
 
             $('#userList').append(newRow)
             $(`#${users[i].getUserId()}_delete`).click(
-                () => userService.deleteUser(users[i]._id).then(() => deleteUserFromUI(users[i].getUserId())))
+                () => userService.deleteUser(users[i]._id)
+                    .then(() => deleteUserFromUI(users[i].getUserId())))
 
             $(`#${users[i].getUserId()}_edit`).click(() => editUserData(users[i].getUserId()))
         }
@@ -68,7 +71,6 @@
         $('#userList').html(userRows)
         $('#AddUserBtn').click(buildUser)
         $('#UpdateUserBtn').click(updateUser)
-
     }
 
     function formatUsers(users) {
@@ -85,10 +87,19 @@
 
     function getUserDetailsFromId(userId) {
         userService.findUserById(userId).then((user) => {
-            populateForm(new User(user._id, user.username, user.password, user.firstName, user.lastName,
-                            user.role))
+            populateForm(
+                new User(user._id, user.username, user.password, user.firstName, user.lastName,
+                         user.role))
         })
 
+    }
+
+    function resetFields() {
+        $('#usernameFld').val('')
+        $('#passwordFld').val('')
+        $('#firstNameFld').val('')
+        $('#lastNameFld').val('')
+        $('#roleFld').val('')
     }
 
     function populateForm(user) {
@@ -100,7 +111,7 @@
         userId = user.getUserId()
     }
 
-    function updateUser(){
+    function updateUser() {
         console.log('Updating user')
         userName = userNameFld.val()
         password = passwordFld.val()
@@ -108,7 +119,10 @@
         lastName = lastNameFld.val()
         role = roleFld.val()
         user = new User(userId, userName, password, firstName, lastName, role)
-        userService.updateUser(userId,user).then(() => {
+
+        resetFields()
+
+        userService.updateUser(userId, user).then(() => {
             console.log("updated user", user)
             const indexToUpdate = usersList.findIndex((u) => u.getUserId() == userId)
             usersList.splice(indexToUpdate, 1, user)
