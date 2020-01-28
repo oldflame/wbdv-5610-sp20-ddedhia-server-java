@@ -6,6 +6,7 @@
     let lastNameFld
     let roleFld
     let userService
+    let userId
 
     function buildUser() {
         userName = userNameFld.val()
@@ -48,7 +49,7 @@
 
             $('#userList').append(newRow)
             $(`#${users[i].getUserId()}_delete`).click(
-                () => deleteUser(users[i]._id).then(() => deleteUserFromUI(users[i].getUserId())))
+                () => userService.deleteUser(users[i]._id).then(() => deleteUserFromUI(users[i].getUserId())))
 
             $(`#${users[i].getUserId()}_edit`).click(() => editUserData(users[i].getUserId()))
         }
@@ -66,6 +67,8 @@
         userRows.splice(1, userRows.length - 1)
         $('#userList').html(userRows)
         $('#AddUserBtn').click(buildUser)
+        $('#UpdateUserBtn').click(updateUser)
+
     }
 
     function formatUsers(users) {
@@ -78,8 +81,6 @@
 
     function editUserData(userId) {
         getUserDetailsFromId(userId)
-        // console.log("editing", userDetails)
-        // populateForm(userDetails)
     }
 
     function getUserDetailsFromId(userId) {
@@ -90,14 +91,31 @@
 
     }
 
-
-
     function populateForm(user) {
         userNameFld.val(user.getUserName())
         passwordFld.val(user.getPassword())
         firstNameFld.val(user.getFirstName())
         lastNameFld.val(user.getLastName())
         roleFld.val(user.getRole())
+        userId = user.getUserId()
+    }
+
+    function updateUser(){
+        console.log('Updating user')
+        userName = userNameFld.val()
+        password = passwordFld.val()
+        firstName = firstNameFld.val()
+        lastName = lastNameFld.val()
+        role = roleFld.val()
+        user = new User(userId, userName, password, firstName, lastName, role)
+        userService.updateUser(userId,user).then(() => {
+            console.log("updated user", user)
+            const indexToUpdate = usersList.findIndex((u) => u.getUserId() == userId)
+            usersList.splice(indexToUpdate, 1, user)
+            console.log("Post update", usersList, user)
+            renderUsers(usersList)
+        })
+
     }
 
     function main() {
@@ -113,7 +131,7 @@
             renderUsers(usersList)
         })
         $('#AddUserBtn').click(buildUser)
-        $('#UpdateUserBtn').click()
+        $('#UpdateUserBtn').click(updateUser)
 
     }
 

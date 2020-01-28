@@ -33,7 +33,14 @@ function AdminUserServiceClient() {
     }
 
     function updateUser(userId, user) {
-        
+        console.log(JSON.stringify(user))
+        return(fetch( `${self.url}/${userId}`, {
+            method: 'PUT',
+            body : JSON.stringify(user.getUser()),
+            headers : {
+                'content-type' : 'application/json'
+            }
+        }).then(response =>response.json()))
     }
 
     function deleteUser(userId) {
